@@ -24,4 +24,4 @@ This syntax will re-create the movie embedded in this README. When creating a cu
 
 # Requirements
 
-Code was written in MATLAB R2022a. It will likely work in similar versions, but this hasn't been tested.
+Code was written in MATLAB R2022a. It was tested and ran successfully in an earlier version as well (MATLAB R2016b).

@@ -167,7 +167,11 @@ for j = 1:n_frames
     % Draw and capture frame for plot.
     axes(ax) %#ok
     drawnow
-    cdata = print('-RGBImage',res,'-vector');
+    try
+        cdata = print('-RGBImage',res,'-vector'); % for newer versions of MATLAB
+    catch
+        cdata = print('-RGBImage',res,'-painters'); % for older versions of MATLAB
+    end
     F(j) = crop_frame(im2frame(cdata),Vid);
 
 end
